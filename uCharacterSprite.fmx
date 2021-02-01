@@ -1,0 +1,19 @@
+object CharacterSprite: TCharacterSprite
+  Size.Width = 192.000000000000000000
+  Size.Height = 256.000000000000000000
+  Size.PlatformDefault = False
+  OnClick = FrameClick
+  object CharacterImage: TGlyph
+    Align = Client
+    Size.Width = 192.000000000000000000
+    Size.Height = 256.000000000000000000
+    Size.PlatformDefault = False
+    Images = DMImages.imgPersonnages
+  end
+  object AutoRemove: TTimer
+    Enabled = False
+    OnTimer = AutoRemoveTimer
+    Left = 80
+    Top = 112
+  end
+end

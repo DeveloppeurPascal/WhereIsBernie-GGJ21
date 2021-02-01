@@ -1,0 +1,62 @@
+inherited frmSceneScore: TfrmSceneScore
+  Size.Width = 478.000000000000000000
+  Size.Height = 391.000000000000000000
+  inherited btnMenu: TButton
+    Position.Y = 331.000000000000000000
+    Size.Width = 438.000000000000000000
+  end
+  object Label1: TLabel
+    Align = Top
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Margins.Bottom = 10.000000000000000000
+    Position.X = 18.000000000000000000
+    Position.Y = 20.000000000000000000
+    Scale.X = 1.799999952316284000
+    Scale.Y = 2.000000000000000000
+    Size.Width = 245.555572509765600000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    Text = 'Scores'
+    TabOrder = 1
+  end
+  object Layout1: TLayout
+    Align = Client
+    Size.Width = 478.000000000000000000
+    Size.Height = 247.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object sgScores: TStringGrid
+      Align = HorzCenter
+      CanFocus = True
+      ClipChildren = True
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 10.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 458.000000000000000000
+      Size.Height = 227.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Options = [Header]
+      Viewport.Width = 458.000000000000000000
+      Viewport.Height = 227.000000000000000000
+      object StringColumn1: TStringColumn
+        Header = 'Pseudo'
+        Size.Width = 250.000000000000000000
+      end
+      object IntegerColumn1: TIntegerColumn
+        Header = 'Score'
+        Size.Width = 90.000000000000000000
+      end
+      object IntegerColumn2: TIntegerColumn
+        Header = 'Level'
+        Size.Width = 90.000000000000000000
+      end
+    end
+  end
+end
