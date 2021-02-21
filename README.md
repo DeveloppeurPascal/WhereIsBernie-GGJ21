@@ -1,11 +1,15 @@
 # WhereIsBernie-GGJ21
 Codes sources pour le jeu Where is Bernie développé à l'occasion de la Global Game Jam 2021.
 
-Jeu développé avec Delphi 10.4.1 et son framework FireMonkey. Des installeurs sont disponibles pour iOS, macOS, Android et Windows pour celles et ceux qui ne voudraient pas compiler eux-mêmes.
+Jeu développé sous Delphi 10.4.1 Sydney en utilisant son framework multiplateforme FireMonkey. Des installeurs sont disponibles pour iOS, macOS, Android et Windows pour celles et ceux qui ne voudraient pas compiler eux-mêmes.
 
-La conception du jeu a fait l'objet d'un live stream sur Twitch : https://www.twitch.tv/collections/dWpsGf15XhYP1Q
+Téléchargement des sources officiels de la GGJ21 et des programmes pour jouer depuis la page du jeu : https://globalgamejam.org/2021/games/where-bernie-4
 
-Plus d'infos sur la page du jeu : https://globalgamejam.org/2021/games/where-bernie-4
+Plus d'infos sur ce projet et revoir sa session de codage en direct sous Delphi sur https://developpeur-pascal.fr/p/_3008-live-stream-delphi-du-29-31-janvier-2021-codage-du-jeu-where-is-bernie-a-l-occasion-de-la-global-game-jam-2021.html
+
+Pour connaître le programme des prochains live streams Twitch, rendez-vous sur https://developpeur-pascal.fr/p/_600e-livestreams-de-codage-en-direct-avec-delphi.html
+
+Et pour me suivre sur Twitch, rendez-vous sur https://www.twitch.tv/patrickpremartin dès maintenant. Vous serez y averti automatiquement des prochaines sessions.
 
 -----
 
