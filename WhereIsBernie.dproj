@@ -1,14 +1,15 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
         <ProjectGuid>{B2BE7327-6DC6-4C25-9FA3-DE799176652F}</ProjectGuid>
-        <ProjectVersion>19.1</ProjectVersion>
+        <ProjectVersion>19.2</ProjectVersion>
         <FrameworkType>FMX</FrameworkType>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Release</Config>
+        <Config Condition="'$(Config)'==''">Debug</Config>
         <Platform Condition="'$(Platform)'==''">Win64</Platform>
         <TargetedPlatforms>38035</TargetedPlatforms>
         <AppType>Application</AppType>
         <MainSource>WhereIsBernie.dpr</MainSource>
+        <Profile Condition="'$(Platform)'=='OSX64'">iMac</Profile>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
         <Base>true</Base>
@@ -174,6 +175,7 @@
         <AUP_CALL_PHONE>false</AUP_CALL_PHONE>
         <AUP_READ_PHONE_STATE>false</AUP_READ_PHONE_STATE>
         <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
+        <Android_LauncherIcon192>$(BDS)\bin\Artwork\Android\FM_LauncherIcon_192x192.png</Android_LauncherIcon192>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Android64)'!=''">
         <DCC_UsePackage>DBXSqliteDriver;RESTComponents;DBXInterBaseDriver;emsclientfiredac;tethering;DataSnapFireDAC;bindcompfmx;FmxTeeUI;fmx;FireDACIBDriver;RadiantShapesFmx;FireDACDBXDriver;dbexpress;IndyCore;dsnap;emsclient;DataSnapCommon;FireDACCommon;RESTBackendComponents;soapserver;bindengine;CloudService;FireDACCommonDriver;DataSnapClient;inet;IndyIPCommon;bindcompdbx;IndyIPServer;IndySystem;fmxFireDAC;FireDAC;FireDACSqliteDriver;ibmonitor;FMXTee;soaprtl;DbxCommonDriver;ibxpress;xmlrtl;soapmidas;DataSnapNativeClient;FireDACDSDriver;rtl;DbxClientDriver;ibxbindings;CustomIPTransport;bindcomp;IndyIPClient;dbxcds;RadiantShapesFmx_Design;dsnapxml;DataSnapProviderClient;dbrtl;IndyProtocols;$(DCC_UsePackage)</DCC_UsePackage>
@@ -204,6 +206,7 @@
         <AUP_ACCESS_COARSE_LOCATION>false</AUP_ACCESS_COARSE_LOCATION>
         <AUP_INTERNET>false</AUP_INTERNET>
         <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
+        <Android_LauncherIcon192>$(BDS)\bin\Artwork\Android\FM_LauncherIcon_192x192.png</Android_LauncherIcon192>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_iOSDevice64)'!=''">
         <DCC_UsePackage>DBXSqliteDriver;RESTComponents;fmxase;DBXInterBaseDriver;emsclientfiredac;tethering;DataSnapFireDAC;bindcompfmx;FmxTeeUI;fmx;FireDACIBDriver;RadiantShapesFmx;FireDACDBXDriver;dbexpress;IndyCore;dsnap;emsclient;DataSnapCommon;FireDACCommon;RESTBackendComponents;soapserver;bindengine;CloudService;FireDACCommonDriver;DataSnapClient;inet;IndyIPCommon;bindcompdbx;IndyIPServer;IndySystem;fmxFireDAC;FireDAC;FireDACSqliteDriver;ibmonitor;FMXTee;soaprtl;DbxCommonDriver;ibxpress;xmlrtl;soapmidas;DataSnapNativeClient;FireDACDSDriver;rtl;DbxClientDriver;ibxbindings;CustomIPTransport;bindcomp;IndyIPClient;dbxcds;RadiantShapesFmx_Design;dsnapxml;DataSnapProviderClient;dbrtl;IndyProtocols;$(DCC_UsePackage)</DCC_UsePackage>
@@ -473,6 +476,12 @@
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="3">
+                <DeployFile LocalName="_assets-used\opengameart.com\AWinterTale.mp3" Configuration="Debug" Class="File">
+                    <Platform Name="Win32">
+                        <RemoteName>AWinterTale.mp3</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPhone\FM_SettingIcon_87x87.png" Configuration="Debug" Class="iPhone_Setting87">
                     <Platform Name="iOSDevice64">
                         <Overwrite>true</Overwrite>
@@ -512,6 +521,13 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
+                <DeployFile LocalName="_assets-used\opengameart.com\AWinterTale.mp3" Configuration="Debug" Class="File">
+                    <Platform Name="Android">
+                        <RemoteDir>.\assets\internal\</RemoteDir>
+                        <RemoteName>AWinterTale.mp3</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_144x144.png" Configuration="Debug" Class="Android_LauncherIcon144">
                     <Platform Name="Android64">
                         <RemoteName>ic_launcher.png</RemoteName>
@@ -543,6 +559,12 @@
                 <DeployFile LocalName="Android64\Debug\classes.dex" Configuration="Debug" Class="AndroidClassesDexFile">
                     <Platform Name="Android64">
                         <RemoteName>classes.dex</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="_assets-used\opengameart.com\AWinterTale.mp3" Configuration="Release" Class="File">
+                    <Platform Name="Linux64">
+                        <RemoteName>AWinterTale.mp3</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -661,6 +683,13 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
+                <DeployFile LocalName="_assets-used\opengameart.com\AWinterTale.mp3" Configuration="Release" Class="File">
+                    <Platform Name="Android">
+                        <RemoteDir>.\assets\internal\</RemoteDir>
+                        <RemoteName>AWinterTale.mp3</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPad\FM_SpotlightSearchIcon_80x80.png" Configuration="Debug" Class="iPad_SpotLight80">
                     <Platform Name="iOSDevice64">
                         <Overwrite>true</Overwrite>
@@ -687,6 +716,19 @@
                 <DeployFile LocalName="Android64\Release\classes.dex" Configuration="Release" Class="AndroidClassesDexFile">
                     <Platform Name="Android64">
                         <RemoteName>classes.dex</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="_assets-used\opengameart.com\AWinterTale.mp3" Configuration="Release" Class="File">
+                    <Platform Name="Android64">
+                        <RemoteDir>.\assets\internal\</RemoteDir>
+                        <RemoteName>AWinterTale.mp3</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="_assets-used\opengameart.com\AWinterTale.mp3" Configuration="Release" Class="File">
+                    <Platform Name="Win32">
+                        <RemoteName>AWinterTale.mp3</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -789,6 +831,13 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
+                <DeployFile LocalName="_assets-used\opengameart.com\AWinterTale.mp3" Configuration="Debug" Class="File">
+                    <Platform Name="OSX64">
+                        <RemoteDir>Contents\MacOS\</RemoteDir>
+                        <RemoteName>AWinterTale.mp3</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="Android64\Debug\strings.xml" Configuration="Debug" Class="Android_Strings">
                     <Platform Name="Android64">
                         <Overwrite>true</Overwrite>
@@ -846,6 +895,13 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
+                <DeployFile LocalName="_assets-used\opengameart.com\AWinterTale.mp3" Configuration="Release" Class="File">
+                    <Platform Name="OSX64">
+                        <RemoteDir>Contents\MacOS\</RemoteDir>
+                        <RemoteName>AWinterTale.mp3</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPhone\FM_ApplicationIcon_180x180.png" Configuration="Debug" Class="iPhone_AppIcon180">
                     <Platform Name="iOSDevice64">
                         <Overwrite>true</Overwrite>
@@ -890,46 +946,16 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="assets\opengameart.com\AWinterTale.mp3" Configuration="Debug" Class="File">
-                    <Platform Name="Android">
-                        <RemoteDir>.\assets\internal\</RemoteDir>
-                        <RemoteName>AWinterTale.mp3</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                    <Platform Name="Android64">
-                        <RemoteDir>.\assets\internal\</RemoteDir>
-                        <RemoteName>AWinterTale.mp3</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                    <Platform Name="iOSDevice64">
-                        <RemoteName>AWinterTale.mp3</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                    <Platform Name="iOSSimulator">
-                        <RemoteName>AWinterTale.mp3</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                    <Platform Name="Linux64">
-                        <RemoteName>AWinterTale.mp3</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                    <Platform Name="OSX64">
-                        <RemoteDir>Contents\MacOS\</RemoteDir>
-                        <RemoteName>AWinterTale.mp3</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                    <Platform Name="Win32">
-                        <RemoteName>AWinterTale.mp3</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                    <Platform Name="Win64">
-                        <RemoteName>AWinterTale.mp3</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
                 <DeployFile LocalName="Android\Release\libWhereIsBernie.so" Configuration="Release" Class="ProjectOutput">
                     <Platform Name="Android">
                         <RemoteName>libWhereIsBernie.so</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="_assets-used\opengameart.com\AWinterTale.mp3" Configuration="Debug" Class="File">
+                    <Platform Name="Android64">
+                        <RemoteDir>.\assets\internal\</RemoteDir>
+                        <RemoteName>AWinterTale.mp3</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -974,6 +1000,12 @@
                 </DeployFile>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPhone\FM_SpotlightSearchIcon_120x120.png" Configuration="Debug" Class="iPhone_Spotlight120">
                     <Platform Name="iOSDevice64">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="_assets-used\opengameart.com\AWinterTale.mp3" Configuration="Debug" Class="File">
+                    <Platform Name="iOSDevice64">
+                        <RemoteName>AWinterTale.mp3</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -1066,43 +1098,6 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="assets\opengameart.com\AWinterTale.mp3" Configuration="Release" Class="File">
-                    <Platform Name="Android">
-                        <RemoteDir>.\assets\internal\</RemoteDir>
-                        <RemoteName>AWinterTale.mp3</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                    <Platform Name="Android64">
-                        <RemoteDir>.\assets\internal\</RemoteDir>
-                        <RemoteName>AWinterTale.mp3</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                    <Platform Name="iOSDevice64">
-                        <RemoteName>AWinterTale.mp3</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                    <Platform Name="iOSSimulator">
-                        <RemoteName>AWinterTale.mp3</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                    <Platform Name="Linux64">
-                        <RemoteName>AWinterTale.mp3</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                    <Platform Name="OSX64">
-                        <RemoteDir>Contents\MacOS\</RemoteDir>
-                        <RemoteName>AWinterTale.mp3</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                    <Platform Name="Win32">
-                        <RemoteName>AWinterTale.mp3</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                    <Platform Name="Win64">
-                        <RemoteName>AWinterTale.mp3</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
                 <DeployFile LocalName="Android64\Release\colors.xml" Configuration="Release" Class="Android_Colors">
                     <Platform Name="Android64">
                         <Overwrite>true</Overwrite>
@@ -1148,6 +1143,12 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
+                <DeployFile LocalName="_assets-used\opengameart.com\AWinterTale.mp3" Configuration="Release" Class="File">
+                    <Platform Name="iOSDevice64">
+                        <RemoteName>AWinterTale.mp3</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="Android64\Debug\colors.xml" Configuration="Debug" Class="Android_Colors">
                     <Platform Name="Android64">
                         <Overwrite>true</Overwrite>
@@ -1156,6 +1157,12 @@
                 <DeployFile LocalName="Win32\Debug\WhereIsBernie.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>WhereIsBernie.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="_assets-used\opengameart.com\AWinterTale.mp3" Configuration="Debug" Class="File">
+                    <Platform Name="Linux64">
+                        <RemoteName>AWinterTale.mp3</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -1183,6 +1190,18 @@
                 </DeployFile>
                 <DeployFile LocalName="Android64\Release\splash_image_def.xml" Configuration="Release" Class="AndroidSplashImageDef">
                     <Platform Name="Android64">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="_assets-used\opengameart.com\AWinterTale.mp3" Configuration="Release" Class="File">
+                    <Platform Name="Win64">
+                        <RemoteName>AWinterTale.mp3</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="_assets-used\opengameart.com\AWinterTale.mp3" Configuration="Debug" Class="File">
+                    <Platform Name="Win64">
+                        <RemoteName>AWinterTale.mp3</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -1345,6 +1364,16 @@
                     </Platform>
                     <Platform Name="Android64">
                         <RemoteDir>res\drawable-xxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon192">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xxxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-xxxhdpi</RemoteDir>
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
@@ -1975,7 +2004,7 @@
                 <Platform value="iOSDevice64">True</Platform>
                 <Platform value="iOSSimulator">False</Platform>
                 <Platform value="Linux64">True</Platform>
-                <Platform value="OSX64">True</Platform>
+                <Platform value="OSX64" Profile="iMac">True</Platform>
                 <Platform value="Win32">True</Platform>
                 <Platform value="Win64">True</Platform>
             </Platforms>

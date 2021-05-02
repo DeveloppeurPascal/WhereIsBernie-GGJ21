@@ -76,7 +76,7 @@ begin
     'AWinterTale.mp3');
 {$ELSEIF Defined(MSWINDOWS)}
 {$IFDEF DEBUG}
-  filename := '..\..\assets\opengameart.com\AWinterTale.mp3';
+  filename := '..\..\_assets-used\opengameart.com\AWinterTale.mp3';
 {$ELSE}
   filename := tpath.Combine(tpath.GetDirectoryName(paramstr(0)),
     'AWinterTale.mp3');

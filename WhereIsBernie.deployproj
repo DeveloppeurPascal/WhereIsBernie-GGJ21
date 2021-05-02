@@ -4,10 +4,10 @@
         <ProjectFileVersion>12</ProjectFileVersion>
     </ProjectExtensions>
     <PropertyGroup>
-        <DeviceId Condition="'$(Platform)'=='Android'">3080SH2002011919</DeviceId>
-        <DeviceId Condition="'$(Platform)'=='Android64'">3080SH2002011919</DeviceId>
-        <DeviceId Condition="'$(Platform)'=='iOSDevice64'">00008027-00093081012B002E</DeviceId>
-        <DeviceId Condition="'$(Platform)'=='iOSSimulator'">iPhone5</DeviceId>
+        <DeviceId Condition="'$(Platform)'=='Android'"/>
+        <DeviceId Condition="'$(Platform)'=='Android64'"/>
+        <DeviceId Condition="'$(Platform)'=='iOSDevice64'"/>
+        <DeviceId Condition="'$(Platform)'=='iOSSimulator'"/>
     </PropertyGroup>
     <ItemGroup Condition="'$(Platform)'=='iOSDevice64'">
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_SettingIcon_87x87.png" Condition="'$(Config)'=='Debug'">
@@ -173,15 +173,6 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="assets\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>WhereIsBernie.app\</RemoteDir>
-            <RemoteName>AWinterTale.mp3</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="iOSDevice64\Debug\WhereIsBernie.entitlements" Condition="'$(Config)'=='Debug'">
             <RemoteDir>WhereIsBernie.app\..\</RemoteDir>
             <RemoteName>WhereIsBernie.entitlements</RemoteName>
@@ -209,6 +200,15 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="_assets-used\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>WhereIsBernie.app\</RemoteDir>
+            <RemoteName>AWinterTale.mp3</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImage_3x.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>WhereIsBernie.app\..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset\</RemoteDir>
             <RemoteName>FM_LaunchScreenImage_iPhone@3x.png</RemoteName>
@@ -218,20 +218,20 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="assets\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Release'">
-            <RemoteDir>WhereIsBernie.app\</RemoteDir>
-            <RemoteName>AWinterTale.mp3</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_SpotlightSearchIcon_80x80.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>WhereIsBernie.app\..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset\</RemoteDir>
             <RemoteName>FM_SpotlightSearchIcon_80x80.png</RemoteName>
             <DeployClass>iPhone_Spotlight80</DeployClass>
             <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="_assets-used\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Release'">
+            <RemoteDir>WhereIsBernie.app\</RemoteDir>
+            <RemoteName>AWinterTale.mp3</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
@@ -276,7 +276,7 @@
             <Overwrite>True</Overwrite>
             <Required>True</Required>
         </DeployFile>
-        <DeployFile Include="assets\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Debug'">
+        <DeployFile Include="_assets-used\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Release'">
             <RemoteDir>WhereIsBernie\</RemoteDir>
             <RemoteName>AWinterTale.mp3</RemoteName>
             <DeployClass>File</DeployClass>
@@ -285,7 +285,7 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="assets\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Release'">
+        <DeployFile Include="_assets-used\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Debug'">
             <RemoteDir>WhereIsBernie\</RemoteDir>
             <RemoteName>AWinterTale.mp3</RemoteName>
             <DeployClass>File</DeployClass>
@@ -296,7 +296,16 @@
         </DeployFile>
     </ItemGroup>
     <ItemGroup Condition="'$(Platform)'=='Win32'">
-        <DeployFile Include="assets\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Debug'">
+        <DeployFile Include="_assets-used\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>WhereIsBernie\</RemoteDir>
+            <RemoteName>AWinterTale.mp3</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="_assets-used\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Release'">
             <RemoteDir>WhereIsBernie\</RemoteDir>
             <RemoteName>AWinterTale.mp3</RemoteName>
             <DeployClass>File</DeployClass>
@@ -315,15 +324,6 @@
             <Overwrite>True</Overwrite>
             <Required>True</Required>
         </DeployFile>
-        <DeployFile Include="assets\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Release'">
-            <RemoteDir>WhereIsBernie\</RemoteDir>
-            <RemoteName>AWinterTale.mp3</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="Win32\Debug\WhereIsBernie.exe" Condition="'$(Config)'=='Debug'">
             <RemoteDir>WhereIsBernie\</RemoteDir>
             <RemoteName>WhereIsBernie.exe</RemoteName>
@@ -336,7 +336,7 @@
         </DeployFile>
     </ItemGroup>
     <ItemGroup Condition="'$(Platform)'=='Linux64'">
-        <DeployFile Include="assets\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Debug'">
+        <DeployFile Include="_assets-used\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Release'">
             <RemoteDir>WhereIsBernie\</RemoteDir>
             <RemoteName>AWinterTale.mp3</RemoteName>
             <DeployClass>File</DeployClass>
@@ -345,7 +345,7 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="assets\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Release'">
+        <DeployFile Include="_assets-used\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Debug'">
             <RemoteDir>WhereIsBernie\</RemoteDir>
             <RemoteName>AWinterTale.mp3</RemoteName>
             <DeployClass>File</DeployClass>
@@ -393,6 +393,24 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="_assets-used\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>WhereIsBernie.app\Contents\MacOS\</RemoteDir>
+            <RemoteName>AWinterTale.mp3</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="_assets-used\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Release'">
+            <RemoteDir>WhereIsBernie.app\Contents\MacOS\</RemoteDir>
+            <RemoteName>AWinterTale.mp3</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="OSX64\Release\WhereIsBernie" Condition="'$(Config)'=='Release'">
             <RemoteDir>WhereIsBernie.app\Contents\MacOS\</RemoteDir>
             <RemoteName>WhereIsBernie</RemoteName>
@@ -408,15 +426,6 @@
             <RemoteName>WhereIsBernie.icns</RemoteName>
             <DeployClass>ProjectOSXResource</DeployClass>
             <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="assets\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>WhereIsBernie.app\Contents\MacOS\</RemoteDir>
-            <RemoteName>AWinterTale.mp3</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
@@ -448,15 +457,6 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="assets\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Release'">
-            <RemoteDir>WhereIsBernie.app\Contents\MacOS\</RemoteDir>
-            <RemoteName>AWinterTale.mp3</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="OSX64\Release\WhereIsBernie.info.plist" Condition="'$(Config)'=='Release'">
             <RemoteDir>WhereIsBernie.app\Contents\</RemoteDir>
             <RemoteName>Info.plist</RemoteName>
@@ -468,6 +468,15 @@
         </DeployFile>
     </ItemGroup>
     <ItemGroup Condition="'$(Platform)'=='Android'">
+        <DeployFile Include="_assets-used\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>WhereIsBernie\assets\internal\</RemoteDir>
+            <RemoteName>AWinterTale.mp3</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="Android\Release\styles-v21.xml" Condition="'$(Config)'=='Release'">
             <RemoteDir>WhereIsBernie\res\values-v21\</RemoteDir>
             <RemoteName>styles.xml</RemoteName>
@@ -527,6 +536,15 @@
             <RemoteName>splash_image.png</RemoteName>
             <DeployClass>Android_SplashImage426</DeployClass>
             <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="_assets-used\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Release'">
+            <RemoteDir>WhereIsBernie\assets\internal\</RemoteDir>
+            <RemoteName>AWinterTale.mp3</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
@@ -621,15 +639,6 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="assets\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>WhereIsBernie\assets\internal\</RemoteDir>
-            <RemoteName>AWinterTale.mp3</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="Android\Release\libWhereIsBernie.so" Condition="'$(Config)'=='Release'">
             <RemoteDir>WhereIsBernie\library\lib\armeabi-v7a\</RemoteDir>
             <RemoteName>libWhereIsBernie.so</RemoteName>
@@ -676,15 +685,6 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="assets\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Release'">
-            <RemoteDir>WhereIsBernie\assets\internal\</RemoteDir>
-            <RemoteName>AWinterTale.mp3</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_72x72.png" Condition="'$(Config)'=='Release'">
             <RemoteDir>WhereIsBernie\res\drawable-hdpi\</RemoteDir>
             <RemoteName>ic_launcher.png</RemoteName>
@@ -710,24 +710,6 @@
             <RemoteName>libcgunwind.1.0.dylib</RemoteName>
             <DeployClass>DependencyModule</DeployClass>
             <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="assets\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>WhereIsBernie.app\</RemoteDir>
-            <RemoteName>AWinterTale.mp3</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="assets\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Release'">
-            <RemoteDir>WhereIsBernie.app\</RemoteDir>
-            <RemoteName>AWinterTale.mp3</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
@@ -847,6 +829,15 @@
             <RemoteName>classes.dex</RemoteName>
             <DeployClass>AndroidClassesDexFile</DeployClass>
             <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="_assets-used\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Release'">
+            <RemoteDir>WhereIsBernie\assets\internal\</RemoteDir>
+            <RemoteName>AWinterTale.mp3</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
@@ -996,7 +987,7 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="assets\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Debug'">
+        <DeployFile Include="_assets-used\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Debug'">
             <RemoteDir>WhereIsBernie\assets\internal\</RemoteDir>
             <RemoteName>AWinterTale.mp3</RemoteName>
             <DeployClass>File</DeployClass>
@@ -1100,15 +1091,6 @@
             <RemoteName>ic_notification.png</RemoteName>
             <DeployClass>Android_NotificationIcon72</DeployClass>
             <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="assets\opengameart.com\AWinterTale.mp3" Condition="'$(Config)'=='Release'">
-            <RemoteDir>WhereIsBernie\assets\internal\</RemoteDir>
-            <RemoteName>AWinterTale.mp3</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
