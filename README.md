@@ -5,11 +5,9 @@ Jeu développé sous Delphi 10.4.1 Sydney en utilisant son framework multiplatef
 
 Téléchargement des sources officiels de la GGJ21 et des programmes pour jouer depuis la page du jeu : https://globalgamejam.org/2021/games/where-bernie-4
 
-Plus d'infos sur ce projet et revoir sa session de codage en direct sous Delphi sur https://serialstreameur.fr/jv-where-is-bernie.php
+Ce dépôt de code évoluera si le jeu évolue, ce n'est pas le cas des éléments publiés sur le site de la Global Game Jam.
 
-Pour connaître le programme des prochains live streams Twitch, rendez-vous sur https://developpeur-pascal.fr/p/_600e-livestreams-de-codage-en-direct-avec-delphi.html
-
-Et pour me suivre sur Twitch, rendez-vous sur https://www.twitch.tv/patrickpremartin dès maintenant. Vous serez y averti automatiquement des prochaines sessions.
+Le développement de ce jeu s'est déroulé en direct sur Twitch durant tout le week-end de la jam. Les rediffusions des vidéos sont disponibles depuis le site https://serialstreameur.fr/jv-where-is-bernie.php où vous trouverez aussi les rediffusions de toutes mes interventions en vidéo (conférences, présentations, webinaires, live coding et game coding).
 
 -----
 
