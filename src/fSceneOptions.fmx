@@ -1,0 +1,53 @@
+inherited frmSceneOptions: TfrmSceneOptions
+  Size.Width = 541.000000000000000000
+  inherited btnMenu: TButton
+    Size.Width = 501.000000000000000000
+  end
+  object Label1: TLabel
+    Align = Top
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Margins.Bottom = 10.000000000000000000
+    Position.X = 18.000000000000000000
+    Position.Y = 20.000000000000000000
+    Scale.X = 1.799999952316284000
+    Scale.Y = 2.000000000000000000
+    Size.Width = 280.555572509765600000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    Text = 'Options'
+    TabOrder = 1
+  end
+  object zoneMusic: TLayout
+    Align = Top
+    Position.Y = 74.000000000000000000
+    Size.Width = 541.000000000000000000
+    Size.Height = 79.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object lblMusicOption: TLabel
+      Align = Center
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Size.Width = 179.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Music'
+      TabOrder = 2
+      object swMusicOnOff: TSwitch
+        Align = Right
+        IsChecked = False
+        Position.X = 101.000000000000000000
+        Size.Width = 78.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        OnSwitch = swMusicOnOffSwitch
+      end
+    end
+  end
+end
